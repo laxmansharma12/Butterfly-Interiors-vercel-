@@ -161,7 +161,7 @@ figcaption button {
 .box {
 	position: relative;
 	width: 100%;
-	height: 600px;
+	height: 82.5vh;
 }
 .box img {
 	height: 100%;
@@ -430,6 +430,9 @@ p span.name {
 }
 /*-----------------recent-projects-style-end---------------------------*/
 /*-----------------nav(header)-style-start---------------------------*/
+.logo {
+	margin-bottom: 5px;
+}
 .logo-image {
 	background: url(./components/Layout/images/butterfly.png);
 	background-size: 100% 100%;
@@ -457,10 +460,12 @@ p span.name {
 }
 
 .navbar {
+	padding-bottom: 0;
+	padding-top: 5px;
 	position: fixed;
 	width: 100%;
+	height: fit-content;
 	z-index: 100;
-	padding-bottom: 0%;
 	background-color: #f9f9f9;
 	display: flex;
 }
@@ -957,7 +962,8 @@ div.btn-group {
 .Navbar-sticky {
 	position: relative;
 	width: 100%;
-	padding-bottom: 80px;
+	/* height: fit-content; */
+	padding-bottom: 65px;
 }
 .toggler-sticky {
 	position: relative;
@@ -1276,7 +1282,8 @@ div.btn-group {
 
 @media (max-width: 640px) {
 	.navbar {
-		padding-bottom: 1rem;
+		padding: 0;
+		padding-bottom: 0.5rem;
 	}
 	.box {
 		height: fit-content;
@@ -1299,8 +1306,8 @@ div.btn-group {
 		background-color: #fff;
 		padding: 0;
 		height: fit-content;
-		width: 100%;
-		margin-top: 3rem;
+		width: 90%;
+		margin-top: 12vh;
 	}
 
 	.banner-img,
@@ -1320,7 +1327,7 @@ div.btn-group {
 		width: 100%;
 	}
 	.modal-content {
-		width: 100%;
+		width: 95%;
 	}
 
 	.submit-wraper form .btn-group .row {

@@ -126,22 +126,6 @@ const ConsultationPage = ({ setContact, contact }) => {
 													3 BHK
 												</label>
 											</div>
-											<div className="middle col-sm-auto">
-												<input
-													type="radio"
-													className="btn-check"
-													value={"Duplex"}
-													name="home_type"
-													id="btn4-check-outlined"
-													autoComplete="off"
-												/>
-												<label
-													className="btn btn-outline-primary"
-													htmlFor="btn4-check-outlined"
-												>
-													Duplex
-												</label>
-											</div>
 											<div className="col-sm-auto">
 												<input
 													type="radio"
@@ -156,6 +140,22 @@ const ConsultationPage = ({ setContact, contact }) => {
 													htmlFor="btn5-check-outlined"
 												>
 													Villa
+												</label>
+											</div>
+											<div className="middle col-sm-auto">
+												<input
+													type="radio"
+													className="btn-check"
+													value={"Duplex"}
+													name="home_type"
+													id="btn4-check-outlined"
+													autoComplete="off"
+												/>
+												<label
+													className="btn btn-outline-primary"
+													htmlFor="btn4-check-outlined"
+												>
+													Duplex
 												</label>
 											</div>
 										</div>

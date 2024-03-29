@@ -39,10 +39,13 @@ const LoginPage = ({
 	const handleSubmitlogin = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await axios.post("/api/v1/auth/login", {
-				email,
-				password,
-			});
+			const res = await axios.post(
+				`${process.env.REACT_APP_API_BASE_URL}/api/v1/auth/login`,
+				{
+					email,
+					password,
+				}
+			);
 			if (res && res.data.success) {
 				toast.success(res.data.message);
 				setAuth({
@@ -130,11 +133,11 @@ const LoginPage = ({
 												required
 											/>
 											<span
-												class="flex justify-around items-center"
+												className="flex justify-around items-center"
 												onClick={handleToggle}
 											>
 												<Icon
-													class="absolute mr-10"
+													className="absolute mr-10"
 													icon={icon}
 													size={20}
 													style={{ marginRight: "10px", marginTop: "10px" }}

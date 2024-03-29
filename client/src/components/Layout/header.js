@@ -61,6 +61,21 @@ const Header = (props) => {
 			: setContact(!contact);
 	};
 
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth <= 640);
+		};
+
+		// Initial check
+		handleResize();
+
+		window.addEventListener("resize", handleResize);
+
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
 	return (
 		<div>
 			<nav className="navbar navbar-expand-lg">
@@ -179,8 +194,10 @@ const Header = (props) => {
 							{hideNavReviews && (
 								<li className="nav-item">
 									<NavLink
-										data-bs-toggle="collapse"
-										data-bs-target="#navbarSupportedContent"
+										{...(isMobile && {
+											"data-bs-toggle": "collapse",
+											"data-bs-target": "#navbarSupportedContent",
+										})}
 										className="nav-link nav-link-texts"
 										onClick={props.data1}
 										style={{ color: "#189BA6" }}
@@ -221,8 +238,10 @@ const Header = (props) => {
 							{hideNavFaqs && (
 								<li className="nav-item">
 									<NavLink
-										data-bs-toggle="collapse"
-										data-bs-target="#navbarSupportedContent"
+										{...(isMobile && {
+											"data-bs-toggle": "collapse",
+											"data-bs-target": "#navbarSupportedContent",
+										})}
 										className="nav-link nav-link-texts"
 										onClick={props.data}
 										style={{ color: "#189BA6" }}
@@ -241,8 +260,10 @@ const Header = (props) => {
 							{!auth.user ? (
 								<div className="nav-controls">
 									<button
-										data-bs-toggle="collapse"
-										data-bs-target="#navbarSupportedContent"
+										{...(isMobile && {
+											"data-bs-toggle": "collapse",
+											"data-bs-target": "#navbarSupportedContent",
+										})}
 										id="btn-login"
 										className="btn btn-outline me-2"
 										onClick={() => setLogin(!login)}
@@ -251,8 +272,10 @@ const Header = (props) => {
 									</button>
 									{signBtn && (
 										<button
-											data-bs-toggle="collapse"
-											data-bs-target="#navbarSupportedContent"
+											{...(isMobile && {
+												"data-bs-toggle": "collapse",
+												"data-bs-target": "#navbarSupportedContent",
+											})}
 											id="btn-signup"
 											className="btn nav-link-btn"
 											onClick={() => setSignUp(!signup)}
@@ -285,15 +308,17 @@ const Header = (props) => {
 											auth?.user?.role === 1 ? "admin" : "user"
 										}`}
 									>
-										<i class="fa-solid fa-user"></i> Profile
+										<i className="fa-solid fa-user"></i> Profile
 									</NavLink>
 									<ul
-										data-bs-toggle="collapse"
-										data-bs-target="#navbarSupportedContent"
+										{...(isMobile && {
+											"data-bs-toggle": "collapse",
+											"data-bs-target": "#navbarSupportedContent",
+										})}
 										onClick={handleLogout}
 										style={{ cursor: "pointer" }}
 									>
-										<i class="fa-solid fa-right-from-bracket"></i> LogOut
+										<i className="fa-solid fa-right-from-bracket"></i> LogOut
 									</ul>
 								</div>
 							)}

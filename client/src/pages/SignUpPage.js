@@ -76,13 +76,16 @@ const SignUpPage = ({ signup, setSignUp, login, setLogin, setSignUpBtn }) => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await axios.post("/api/v1/auth/signup", {
-				name,
-				email,
-				password,
-				number,
-				answer,
-			});
+			const res = await axios.post(
+				`${process.env.REACT_APP_API_BASE_URL}/api/v1/auth/signup`,
+				{
+					name,
+					email,
+					password,
+					number,
+					answer,
+				}
+			);
 			if (res && res.data.success) {
 				toast.success(res.data.message);
 				setSignUp(!signup);
