@@ -123,7 +123,7 @@ const ForgotPasswordPage = ({
 						hideFP();
 					}}
 				>
-					<i class="fa-solid fa-arrow-left"></i>
+					<i className="fa-solid fa-arrow-left"></i>
 				</span>
 				<span
 					className="close close1"
@@ -191,11 +191,11 @@ const ForgotPasswordPage = ({
 												required
 											/>
 											<span
-												class="flex justify-around items-center"
+												className="flex justify-around items-center"
 												onClick={handleToggle}
 											>
 												<Icon
-													class="absolute mr-10"
+													className="absolute mr-10"
 													icon={icon}
 													size={20}
 													style={{ marginRight: "10px", marginTop: "10px" }}

@@ -176,14 +176,14 @@ const Udashboard = () => {
 												className="btn btn-info"
 												onClick={() => setEdit(!edit)}
 											>
-												<i class="fa-regular fa-pen-to-square icons-user-btn"></i>
+												<i className="fa-regular fa-pen-to-square icons-user-btn"></i>
 												Edit
 											</NavLink>
 											<a
 												className="btn btn-warning"
 												onClick={() => navigate(-1)}
 											>
-												<i class="fa-solid fa-up-right-from-square icons-user-btn"></i>
+												<i className="fa-solid fa-up-right-from-square icons-user-btn"></i>
 												Exit
 											</a>
 										</div>
@@ -226,7 +226,7 @@ const Udashboard = () => {
 														onClick={handleToggle}
 													>
 														<Icon
-															class="absolute mr-10"
+															className="absolute mr-10"
 															icon={icon}
 															size={20}
 															style={{ color: "#bebebe", marginRight: "10px" }}
@@ -279,9 +279,9 @@ const Udashboard = () => {
 											value={auth?.user?.email}
 											style={{ position: "absolute", opacity: "0" }}
 										/>
-										<div class="review-group">
-											<span class="input-group-addon">
-												<i class="fa fa-pencil"></i>
+										<div className="review-group">
+											<span className="input-group-addon">
+												<i className="fa fa-pencil"></i>
 											</span>
 											<textarea
 												name="message"
@@ -293,7 +293,7 @@ const Udashboard = () => {
 											></textarea>
 											<button
 												type="submit"
-												class="input-group-submit "
+												className="input-group-submit "
 												value="send"
 											>
 												SEND

@@ -286,14 +286,14 @@ const AdminDashboard = () => {
 												className="btn btn-info"
 												onClick={() => setEdit(!edit)}
 											>
-												<i class="fa-regular fa-pen-to-square icons-user-btn"></i>
+												<i className="fa-regular fa-pen-to-square icons-user-btn"></i>
 												Edit
 											</NavLink>
 											<a
 												className="btn btn-warning"
 												onClick={() => navigate(-1)}
 											>
-												<i class="fa-solid fa-up-right-from-square icons-user-btn"></i>
+												<i className="fa-solid fa-up-right-from-square icons-user-btn"></i>
 												Exit
 											</a>
 										</div>
@@ -336,7 +336,7 @@ const AdminDashboard = () => {
 														onClick={handleToggle}
 													>
 														<Icon
-															class="absolute mr-10"
+															className="absolute mr-10"
 															icon={icon}
 															size={20}
 															style={{ color: "#bebebe", marginRight: "10px" }}
@@ -591,23 +591,23 @@ const AdminDashboard = () => {
 														width={250}
 														style={{ top: "40%" }}
 													>
-														<div class="icon-box">
-															<span class="material-icons">!</span>
+														<div className="icon-box">
+															<span className="material-icons">!</span>
 														</div>
-														<h4 class="modal-title w-100 text-center p-2">
+														<h4 className="modal-title w-100 text-center p-2">
 															Delete?
 														</h4>
-														<div class="text-center mt-2">
+														<div className="text-center mt-2">
 															<button
 																type="button"
-																class="btn btn-secondary"
+																className="btn btn-secondary"
 																onClick={() => setAskDelete(false)}
 															>
 																Cancel
 															</button>
 															<button
 																type="button"
-																class="btn btn-danger"
+																className="btn btn-danger"
 																onClick={() => {
 																	handleDelete();
 																	setAskDelete(false);

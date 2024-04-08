@@ -133,7 +133,7 @@ const RecentProjects = () => {
 									<div className="">
 										<h5>Client Feedback</h5>
 									</div>
-									<span class="quote-mark">“</span>
+									<span className="quote-mark">“</span>
 									<div className="review">
 										<span>
 											Butterfly Interior's designs were very good. High quality
@@ -255,7 +255,7 @@ const RecentProjects = () => {
 									<div className="">
 										<h5>Client Feedback</h5>
 									</div>
-									<span class="quote-mark">“</span>
+									<span className="quote-mark">“</span>
 									<div className="review">
 										<span>
 											I recommend Butterfly interior to who all reading my

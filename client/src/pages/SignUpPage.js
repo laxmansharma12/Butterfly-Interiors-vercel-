@@ -194,11 +194,11 @@ const SignUpPage = ({ signup, setSignUp, login, setLogin, setSignUpBtn }) => {
 												required
 											/>
 											<span
-												class="flex justify-around items-center"
+												className="flex justify-around items-center"
 												onClick={handleToggle}
 											>
 												<Icon
-													class="absolute mr-10"
+													className="absolute mr-10"
 													icon={icon}
 													size={20}
 													style={{
